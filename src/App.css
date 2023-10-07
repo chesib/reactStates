@@ -1,0 +1,134 @@
+.fathercard {
+	padding-top: 50px;
+	background-image: linear-gradient(rgb(183, 234, 141), rgb(130, 210, 54));
+	min-height: 100vh;
+}
+.card {
+	border: 1px black solid;
+
+	width: 360px;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+
+	margin: auto;
+}
+.tittle {
+	margin-top: 15px;
+	text-align: center;
+}
+.card h6 {
+	text-align: center;
+}
+/* Estilo para el contenedor del formulario */
+.form-container {
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+/* Estilo para los elementos del formulario */
+.form-container label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.form-container button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+/* Estilo para el botón cuando se coloca el cursor sobre él */
+.form-container button:hover {
+	background-color: #0056b3;
+}
+.error {
+	color: #ff0000;
+	text-align: center;
+	margin-top: 2rem;
+}
+.icons {
+	font-size: 3rem;
+	text-align: center;
+
+	border-radius: 50%;
+
+	margin: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.icons-menu {
+	margin: 5px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.modal {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+
+.modal.show {
+	visibility: visible;
+}
+
+.modal .content {
+	background: black;
+	padding: 2rem;
+	width: 90%;
+	max-width: 600px;
+	border-radius: 4px;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transform: translateY(50%);
+}
+
+.modal.show .content {
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.modal .content h2 {
+	margin-bottom: 1.5rem;
+	text-transform: capitalize;
+	color: white;
+}
+
+.modal .content p {
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	margin-bottom: 2rem;
+}
