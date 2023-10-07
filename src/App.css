@@ -19,16 +19,18 @@
 }
 .card h6 {
 	text-align: center;
+	font-weight: 400;
 }
 /* Estilo para el contenedor del formulario */
 .form-container {
-	max-width: 300px;
-	margin: 0 auto;
-	padding: 10px;
+	max-width: 350px;
+	margin: 5px auto;
+	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
+	text-align: center;
 }
 
 /* Estilo para los elementos del formulario */
@@ -48,25 +50,34 @@
 }
 
 .form-container button {
-	background-color: #007bff;
+	background-color: #22ab34;
 	color: #fff;
 	border: none;
-	border-radius: 3px;
-	padding: 10px 20px;
+	width: 100%;
+	border-radius: 10px;
+	padding: 10px 10px;
 	cursor: pointer;
+	transition: 0.1s;
 }
 
 /* Estilo para el botón cuando se coloca el cursor sobre él */
 .form-container button:hover {
-	background-color: #0056b3;
+	background-color: #3c8618;
 }
 .error {
-	color: #ff0000;
+	border-radius: 10px;
+
+	color: #9c2626;
 	text-align: center;
-	margin-top: 2rem;
+	margin-top: 1rem;
+	padding: 10px;
+	transition: 0.3s;
+}
+.error:hover {
+	background-color: pink;
 }
 .icons {
-	font-size: 3rem;
+	font-size: 2.3rem;
 	text-align: center;
 
 	border-radius: 50%;
