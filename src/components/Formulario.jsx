@@ -16,6 +16,10 @@ const Formulario = () => {
 			setError("* El nombre contiene caracteres inválidos");
 			return;
 		}
+		if (psw.length <= 5) {
+			setError("*Tu contraseña debe tener al menos 6 caracteres");
+			return;
+		}
 		if (psw !== confirmPsw) {
 			setError("* Las contraseñas no coinciden");
 			return;
