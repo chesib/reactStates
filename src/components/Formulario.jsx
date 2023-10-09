@@ -16,6 +16,11 @@ const Formulario = () => {
 			setError("* El nombre contiene caracteres inválidos");
 			return;
 		}
+		if (!validateEmail(email)) {
+			setError("* El correo no es válido");
+			return;
+		}
+
 		if (psw.length <= 5) {
 			setError("*Tu contraseña debe tener al menos 6 caracteres");
 			return;
@@ -24,10 +29,7 @@ const Formulario = () => {
 			setError("* Las contraseñas no coinciden");
 			return;
 		}
-		if (!validateEmail(email)) {
-			setError("* El correo no es válido");
-			return;
-		}
+
 		console.log("Nombre:", nombre);
 		console.log("Email:", email);
 		console.log("Contraseña:", psw);
@@ -54,7 +56,7 @@ const Formulario = () => {
 					<label htmlFor="email"></label>
 					<input
 						placeholder="tuemail@gmail.com"
-						type="email"
+						type="text" /*para poder pasar el rgx */
 						required
 						id="email"
 						onChange={(e) => setEmail(e.target.value)}
